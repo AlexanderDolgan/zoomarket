@@ -1,0 +1,22 @@
+//header info action
+.tel::before {
+
+}
+.delivery::before {
+
+}
+.promo::before {
+
+}
+
+
+//checkbox
+
+[type=checkbox]::after {
+  content: attr(value);
+  margin: -3px 15px;
+  vertical-align: top;
+  display: inline-block;
+  white-space:nowrap;
+  cursor:pointer;
+}
