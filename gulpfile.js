@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    spritesmith = require('gulp.spritesmith'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -34,7 +35,8 @@ var path = {
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        sprite: 'src/sprites/*.png'
     },
     clean: './build'
 };
@@ -43,10 +45,10 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    //tunnel: true,
+    tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "cats"
+    logPrefix: "zoomarket"
 };
 
 //таск для сборки html
@@ -58,11 +60,11 @@ gulp.task('html:build', function () {
 });
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) 
-        .pipe(rigger()) 
-        // .pipe(sourcemaps.init()) 
-        .pipe(uglify()) 
-        // .pipe(sourcemaps.write()) 
+    gulp.src(path.src.js)
+        .pipe(rigger())
+        // .pipe(sourcemaps.init())
+        .pipe(uglify())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
@@ -90,6 +92,15 @@ gulp.task('image:build', function () {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('sprite:build', function () {
+    var spriteData = gulp.src('src/sprites/*.png').pipe(spritesmith({
+        imgName: 'sprite.png',
+        imgPath: '../img/sprites/sprite.png',
+        cssName: '../../style/partials/_sprite.scss',
+        padding: 20
+    }));
+    return spriteData.pipe(gulp.dest('src/img/sprites'));
+});
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -102,7 +113,8 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'sprite:build'
     ]);
 
 gulp.task('watch', function(){
@@ -117,6 +129,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
+    });
+    watch([path.watch.sprite], function(event, cb) {
+        gulp.start('sprite:build');
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');

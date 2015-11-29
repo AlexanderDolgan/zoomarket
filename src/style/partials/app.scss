@@ -1,14 +1,27 @@
+body {
+  font-family: $main-font-family;
+  color: $text-color;
+}
 
+ul {
+  list-style: none;
+}
 
 //header info action
 .tel::before {
-
+  content: '';
+  display: inline-block;
+  @include sprite($phone);
 }
 .delivery::before {
-
+  content: '';
+  display: inline-block;
+  @include sprite($rocket);
 }
 .promo::before {
-
+  content: '';
+  display: inline-block;
+  @include sprite($persent);
 }
 
 
