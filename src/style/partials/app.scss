@@ -98,9 +98,9 @@ hgroup hr {
   font-weight: 400;
 }
 
-//Main content
-//site info-block
+//Main market content
 
+//site info-block
 .info-block {
   background-color: white;
   padding: 5% 10%;
@@ -111,6 +111,25 @@ hgroup hr {
   text-align: center;
 }
 
+//main market navigation
+.nav-animal {
+  text-align: center;
+}
+
+.nav-animal li{
+  display: inline-block;
+  margin-right: 10%;
+  text-transform: uppercase;
+}
+
+.dog::before, .cat::before, .bird::before, .humster::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+}
+.dog::before {
+  @include sprite(phone);
+}
 
 
 //checkbox
