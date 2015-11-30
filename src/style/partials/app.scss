@@ -122,23 +122,59 @@ hgroup hr {
   text-transform: uppercase;
 }
 
-.dog::before, .cat::before, .bird::before, .humster::before {
+//nav icons
+.dog::before {
   content: '';
   display: inline-block;
   margin-right: 5px;
+  @include sprite($dog);
 }
-.dog::before {
-  @include sprite(phone);
+.dog:hover::before,
+.dog:focus::before {
+  @include sprite($dog-selected);
 }
 
+.cat::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  @include sprite($cat);
+}
+
+.cat:hover::before,
+.cat:focus::before {
+  @include sprite($cat-selected);
+}
+
+.bird::before {
+   content: '';
+   display: inline-block;
+   margin-right: 5px;
+   @include sprite($bird);
+}
+.bird:hover::before,
+.bird:focus::before {
+  @include sprite($bird-selected);
+}
+
+.hamster::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  @include sprite($hamster);
+}
+
+.hamster:hover::before,
+.hamster:focus::before {
+  @include sprite($hamster-selected);
+}
 
 //checkbox
 
-[type=checkbox]::after {
-  content: attr(value);
-  margin: -3px 15px;
-  vertical-align: top;
-  display: inline-block;
-  white-space:nowrap;
-  cursor:pointer;
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
 }
+
+
+
