@@ -51,25 +51,47 @@
         <!--main market block-->
         <section class="market">
             <header class="row market-header">
+                <h2>ДЛЯ КОГО ХОТИТЕ ПОДОБРАТЬ КОРМ?</h2>
                 <!--selection market block-->
                 <nav class="market-nav">
                     <!--animals type-->
                     <ul class="nav-animal">
-                        <li class="dog"><label for="dog">Собака</label></li>
-                        <input type="checkbox" id="dog">
-                        <li class="cat">Кошка</li>
-                        <li class="bird">Птица</li>
-                        <li class="hamster">Грызун</li>
+
+                        <input type="radio" id="dog" name="top-radio">
+                        <label for="dog" class="dog">Собака</label>
+
+                        <input type="radio" id="cat" name="top-radio">
+                        <label for="cat" class="cat">Кошка</label>
+
+                        <input type="radio" id="bird" name="top-radio">
+                        <label for="bird" class="bird">Птица</label>
+
+                        <input type="radio" id="hamster" name="top-radio">
+                        <label for="hamster" class="hamster">Грызун</label>
                     </ul>
                     <!--food type-->
                     <ul class="nav-type">
-                        <li>Сухие корма</li>
-                        <li>Консервы</li>
-                        <li>Лечебные</li>
-                        <li>Лакомства</li>
-                        <li>Аксессуары</li>
-                        <li>Игрушки</li>
-                        <li>Косметика</li>
+                        <input type="checkbox" id="dry">
+                        <label for="dry">Сухие</label>
+
+                        <input type="checkbox" id="canned">
+                        <label for="canned">Консервы</label>
+
+                        <input type="checkbox" id="treatment">
+                        <label for="treatment">Лечебные</label>
+
+                        <input type="checkbox" id="treats">
+                        <label for="treats">Лакомства</label>
+
+                        <input type="checkbox" id="accessories">
+                        <label for="accessories">Аксессуары</label>
+
+                        <input type="checkbox" id="toys">
+                        <label for="toys">Игрушки</label>
+
+                        <input type="checkbox" id="cosmetics">
+                        <label for="cosmetics">Косметика</label>
+
                     </ul>
                     <!--company name checkboxes-->
                     <form action="">
@@ -108,7 +130,7 @@
                     <h1>Доставка и оплата</h1>
                     <!--delivery info-->
                     <div class="left-col">
-                        <p>Наш Интернет-зоомагазин предлагает широкий ассортимент качественных и сертифицированных
+                        <p><span class="glyphicon glyphicon-search"></span>Наш Интернет-зоомагазин предлагает широкий ассортимент качественных и сертифицированных
                             кормов для кошек и собак, а также других товаров для собак. Мы предлагаем самые лучшие и
                             востребованные корма для животных.</p>
                     </div>

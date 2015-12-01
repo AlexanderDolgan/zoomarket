@@ -9,6 +9,20 @@ body {
   color: $text-color;
 }
 
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -114,12 +128,33 @@ hgroup hr {
 //main market navigation
 .nav-animal {
   text-align: center;
+  font-size: $font-size-large;
+  margin-top: 4em;
+  cursor: pointer;
 }
 
-.nav-animal li{
-  display: inline-block;
-  margin-right: 10%;
+.nav-animal label {
   text-transform: uppercase;
+  margin-right: 5%;
+}
+
+.nav-animal label:last-child {
+  margin-right: 0%;
+}
+
+label:hover {
+  color: $brand-secondary;
+}
+
+//radio first level - animals types
+
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type=radio]:checked + label{
+  color: $brand-secondary;
 }
 
 //nav icons
@@ -129,8 +164,13 @@ hgroup hr {
   margin-right: 5px;
   @include sprite($dog);
 }
+
 .dog:hover::before,
 .dog:focus::before {
+  @include sprite($dog-selected);
+}
+
+input[type=radio]:checked + .dog::before {
   @include sprite($dog-selected);
 }
 
@@ -146,14 +186,24 @@ hgroup hr {
   @include sprite($cat-selected);
 }
 
+input[type=radio]:checked + .cat::before {
+  @include sprite($cat-selected);
+}
+
 .bird::before {
    content: '';
    display: inline-block;
    margin-right: 5px;
    @include sprite($bird);
 }
+
 .bird:hover::before,
 .bird:focus::before {
+  @include sprite($bird-selected);
+}
+
+input[type=radio]:checked + .bird::before,
+{
   @include sprite($bird-selected);
 }
 
@@ -169,12 +219,30 @@ hgroup hr {
   @include sprite($hamster-selected);
 }
 
-//checkbox
+input[type=radio]:checked + .hamster::before,
+{
+  @include sprite($hamster-selected);
+}
 
-input[type=checkbox] {
-  position: absolute;
+//checkbox second level - food types
+
+.nav-type {
+  display: block;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.nav-type label {
+  display: inline-block;
+  padding: 15px 10px;
+  cursor: pointer;
+
+}
+
+.nav-type input[type=checkbox] {
   opacity: 0;
 }
 
-
-
+input[type=checkbox]:checked + label {
+  color: $brand-secondary;
+}
