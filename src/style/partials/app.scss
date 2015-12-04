@@ -20,7 +20,6 @@ h2 {
 h1, h2, h3 {
   font-weight: 300;
   text-align: center;
-  margin-top: 1.5em;
 }
 
 ul {
@@ -64,7 +63,7 @@ canvas {
   float: right;
 }
 
-.del-promo ul li{
+.del-promo ul li {
   display: inline-block;
   margin-right: 15px;
 }
@@ -76,6 +75,7 @@ canvas {
   margin-right: 5px;
   @include sprite($rocket);
 }
+
 .promo::before {
   content: '';
   display: inline-block;
@@ -98,10 +98,10 @@ canvas {
 }
 
 hgroup hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    width: 300px;
+  border: 0;
+  height: 1px;
+  background: #333;
+  width: 300px;
 }
 
 .header-disc {
@@ -119,7 +119,7 @@ hgroup hr {
   background-color: white;
   padding: 5% 10%;
   margin: 5%;
-  border: 1px solid rgba(0,0,0,.05);
+  border: 1px solid rgba(0, 0, 0, .1);
   font-size: $font-size-large;
   font-weight: 300;
   text-align: center;
@@ -131,6 +131,10 @@ hgroup hr {
   font-size: $font-size-large;
   margin-top: 4em;
   cursor: pointer;
+}
+
+.nav-animal h1 {
+  margin-top: 1.5em;
 }
 
 .nav-animal label {
@@ -153,7 +157,7 @@ input[type=radio] {
   opacity: 0;
 }
 
-input[type=radio]:checked + label{
+input[type=radio]:checked + label {
   color: $brand-secondary;
 }
 
@@ -191,10 +195,10 @@ input[type=radio]:checked + .cat::before {
 }
 
 .bird::before {
-   content: '';
-   display: inline-block;
-   margin-right: 5px;
-   @include sprite($bird);
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  @include sprite($bird);
 }
 
 .bird:hover::before,
@@ -232,17 +236,27 @@ input[type=radio]:checked + .hamster::before,
   margin-top: 1.5em;
 }
 
+.nav-type h3 {
+  margin-top: 3em;
+}
+
 .nav-type label {
   display: inline-block;
-  padding: 15px 10px;
+  box-sizing: border-box;
+  padding: 5px 15px;
   cursor: pointer;
-
 }
 
-.nav-type input[type=checkbox] {
-  opacity: 0;
+//Hide the input
+.nav-type input {
+  display: none;
 }
 
-input[type=checkbox]:checked + label {
+.nav-type input[type=checkbox]:checked + label {
   color: $brand-secondary;
+  box-sizing: border-box;
+  border-bottom: 2px solid $brand-secondary;
+  transition:all 0.2s ease-in;
 }
+
+
