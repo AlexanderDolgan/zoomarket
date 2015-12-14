@@ -55,67 +55,171 @@
                 <!--selection market block-->
                 <nav class="market-nav">
                     <!--animals type-->
-                    <ul class="nav-animal">
+                    <div class="nav-animal">
 
-                        <input type="radio" id="dog" name="top-radio">
-                        <label for="dog" class="dog">Собака</label>
+                        <form action="some_action.php">
+                            <formfield>
+                                <input type="radio" id="dog" name="top-radio" value="dog">
+                                <label for="dog" class="dog">Собака</label>
 
-                        <input type="radio" id="cat" name="top-radio">
-                        <label for="cat" class="cat">Кошка</label>
+                                <input type="radio" id="cat" name="top-radio" value="cat">
+                                <label for="cat" class="cat">Кошка</label>
 
-                        <input type="radio" id="bird" name="top-radio">
-                        <label for="bird" class="bird">Птица</label>
+                                <input type="radio" id="bird" name="top-radio" value="bird">
+                                <label for="bird" class="bird">Птица</label>
 
-                        <input type="radio" id="hamster" name="top-radio">
-                        <label for="hamster" class="hamster">Грызун</label>
-                    </ul>
+                                <input type="radio" id="hamster" name="top-radio" value="hamster">
+                                <label for="hamster" class="hamster">Грызун</label>
+                            </formfield>
+                        </form>
+
+                    </div>
                     <!--food type-->
-                    <ul class="nav-type">
-                        <input type="checkbox" id="dry">
-                        <label for="dry">Сухие</label>
+                    <div class="nav-type">
+                        <form action="some_action.php">
+                            <formfield>
+                                <input type="checkbox" id="dry">
+                                <label for="dry">Сухие</label>
 
-                        <input type="checkbox" id="canned">
-                        <label for="canned">Консервы</label>
+                                <input type="checkbox" id="canned">
+                                <label for="canned">Консервы</label>
 
-                        <input type="checkbox" id="treatment">
-                        <label for="treatment">Лечебные</label>
+                                <input type="checkbox" id="treatment">
+                                <label for="treatment">Лечебные</label>
 
-                        <input type="checkbox" id="treats">
-                        <label for="treats">Лакомства</label>
+                                <input type="checkbox" id="treats">
+                                <label for="treats">Лакомства</label>
 
-                        <input type="checkbox" id="accessories">
-                        <label for="accessories">Аксессуары</label>
+                                <input type="checkbox" id="accessories">
+                                <label for="accessories">Аксессуары</label>
 
-                        <input type="checkbox" id="toys">
-                        <label for="toys">Игрушки</label>
+                                <input type="checkbox" id="toys">
+                                <label for="toys">Игрушки</label>
 
-                        <input type="checkbox" id="cosmetics">
-                        <label for="cosmetics">Косметика</label>
+                                <input type="checkbox" id="cosmetics">
+                                <label for="cosmetics">Косметика</label>
+                            </formfield>
+                        </form>
 
-                    </ul>
+                    </div>
                     <!--company name checkboxes-->
-                    <form action="">
-                        <input type="checkbox" value="Компания 1"/><br>
-                        <input type="checkbox" value="Компания 2"/><br>
-                        <input type="checkbox" value="Компания 3"/><br>
-                        <input type="checkbox" value="Компания 4"/><br>
+                    <div class="nav-company">
+                        <form action="some_action.php">
 
-                        <input type="checkbox" value="Компания 5"/><br>
-                        <input type="checkbox" value="Компания 6"/><br>
-                        <input type="checkbox" value="Компания 7"/><br>
-                        <input type="checkbox" value="Компания 8"/><br>
+                            <!--Сухие-->
+                            <formfield class="dry">
+                                <legend>Сухие</legend>
+                                <label for="company1">Компания</label>
+                                <input type="checkbox" id="company1" value="company1"/>
 
-                        <input type="checkbox" value="Компания 9"/><br>
-                        <input type="checkbox" value="Компания 10"/><br>
-                        <input type="checkbox" value="Компания 11"/><br>
-                        <input type="checkbox" value="Компания 12"/><br>
+                                <label for="company2">Компания</label>
+                                <input type="checkbox" id="company2" value="company2"/>
 
-                        <input type="checkbox" value="Компания 13"/><br>
-                        <input type="checkbox" value="Компания 14"/><br>
-                        <input type="checkbox" value="Компания 15"/><br>
-                        <input type="checkbox" value="Компания 16"/><br>
+                                <label for="company3">Компания</label>
+                                <input type="checkbox" id="company3" value="company3"/>
 
-                    </form>
+                                <label for="company4">Компания</label>
+                                <input type="checkbox" id="company4" value="company4"/>
+                            </formfield>
+
+                            <!--Консервы-->
+                            <formfield class="canned">
+                                <legend>Консервы</legend>
+                                <label for="company5">Компания</label>
+                                <input type="checkbox" id="company5" value="company5"/>
+
+                                <label for="company6">Компания</label>
+                                <input type="checkbox" id="company6" value="company6"/>
+
+                                <label for="company7">Компания</label>
+                                <input type="checkbox" id="company7" value="company7"/>
+
+                                <label for="company8">Компания</label>
+                                <input type="checkbox" id="company8" value="company8"/>
+                            </formfield>
+
+                            <!--Лечебные-->
+                            <formfield class="treatment">
+                                <legend>Лечебные</legend>
+                                <label for="company9">Компания</label>
+                                <input type="checkbox" id="company9" value="company9"/>
+
+                                <label for="company10">Компания</label>
+                                <input type="checkbox" id="company10" value="company10"/>
+
+                                <label for="company11">Компания</label>
+                                <input type="checkbox" id="company11" value="company11"/>
+
+                                <label for="company12">Компания</label>
+                                <input type="checkbox" id="company12" value="company12"/>
+                            </formfield>
+
+                            <!--Лакомства-->
+                            <formfield class="treats">
+                                <legend>Лакомства</legend>
+                                <label for="company13">Компания</label>
+                                <input type="checkbox" id="company13" value="company13"/>
+
+                                <label for="company14">Компания</label>
+                                <input type="checkbox" id="company14" value="company14"/>
+
+                                <label for="company15">Компания</label>
+                                <input type="checkbox" id="company15" value="company15"/>
+
+                                <label for="company16">Компания</label>
+                                <input type="checkbox" id="company16" value="company16"/>
+                            </formfield>
+
+                            <!--Аксессуары-->
+                            <formfield class="accessories">
+                                <legend>Аксессуары</legend>
+                                <label for="company17">Компания</label>
+                                <input type="checkbox" id="company17" value="company17"/>
+
+                                <label for="company18">Компания</label>
+                                <input type="checkbox" id="company18" value="company18"/>
+
+                                <label for="company19">Компания</label>
+                                <input type="checkbox" id="company19" value="company19"/>
+
+                                <label for="company20">Компания</label>
+                                <input type="checkbox" id="company20" value="company20"/>
+                            </formfield>
+
+                            <!--Игрушки-->
+                            <formfield class="toys">
+                                <legend>Игрушки</legend>
+                                <label for="company21">Компания</label>
+                                <input type="checkbox" id="company21" value="company21"/>
+
+                                <label for="company22">Компания</label>
+                                <input type="checkbox" id="company22" value="company22"/>
+
+                                <label for="company23">Компания</label>
+                                <input type="checkbox" id="company23" value="company23"/>
+
+                                <label for="company24">Компания</label>
+                                <input type="checkbox" id="company24" value="company24"/>
+                            </formfield>
+
+                            <!--Косметика-->
+                            <formfield class="cosmetics">
+                                <legend>Косметика</legend>
+                                <label for="company25">Компания</label>
+                                <input type="checkbox" id="company25" value="company25"/>
+
+                                <label for="company26">Компания</label>
+                                <input type="checkbox" id="company26" value="company26"/>
+
+                                <label for="company27">Компания</label>
+                                <input type="checkbox" id="company27" value="company27"/>
+
+                                <label for="company28">Компания</label>
+                                <input type="checkbox" id="company28" value="company28"/>
+                            </formfield>
+
+                        </form>
+                    </div>
                 </nav>
                 <!--market result block-->
                 <section class="container market-result">
@@ -130,7 +234,8 @@
                     <h1>Доставка и оплата</h1>
                     <!--delivery info-->
                     <div class="left-col col-md-6">
-                        <p><span class="glyphicon glyphicon-search"></span>Наш Интернет-зоомагазин предлагает широкий ассортимент качественных и сертифицированных
+                        <p><span class="glyphicon glyphicon-search"></span>Наш Интернет-зоомагазин предлагает широкий
+                            ассортимент качественных и сертифицированных
                             кормов для кошек и собак, а также других товаров для собак. Мы предлагаем самые лучшие и
                             востребованные корма для животных.</p>
                     </div>

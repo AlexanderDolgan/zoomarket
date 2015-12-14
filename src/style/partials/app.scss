@@ -126,6 +126,7 @@ hgroup hr {
 }
 
 //main market navigation
+// top animals navigation radio buttons
 .nav-animal {
   text-align: center;
   font-size: $font-size-large;
@@ -242,7 +243,6 @@ input[type=radio]:checked + .hamster::before,
 
 .nav-type label {
   display: inline-block;
-  box-sizing: border-box;
   padding: 5px 15px;
   cursor: pointer;
 }
@@ -259,4 +259,17 @@ input[type=radio]:checked + .hamster::before,
   transition:all 0.2s ease-in;
 }
 
+// checkboxes third level company name
+.nav-company {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dry {
+  display: none;
+}
+
+#dry:checked + .dry {
+  display: block;
+}
 
